@@ -1,0 +1,1 @@
+Servidor desarrollado con Node.js y Express para gestionar productos y carritos de compra mediante endpoints REST.

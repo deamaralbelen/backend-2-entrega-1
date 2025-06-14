@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "status": true,
+    "thumbnails": [],
+    "title": "Adidas Campus Brown",
+    "description": "Calzado urbano",
+    "code": "Z001",
+    "price": 1300,
+    "stock": 25,
+    "category": "calzado"
+  },
+  {
+    "id": 2,
+    "status": true,
+    "thumbnails": [],
+    "title": "Nike Dunk SB Grey",
+    "description": "Calzado deportivo",
+    "code": "N100",
+    "price": 1500,
+    "stock": 15,
+    "category": "calzado"
+  },
+  {
+    "id": 3,
+    "status": true,
+    "thumbnails": [],
+    "title": "Puma XL Black and White",
+    "description": "Calzado de uso diario",
+    "code": "P050",
+    "price": 1650,
+    "stock": 20,
+    "category": "calzado"
+  }
+]
