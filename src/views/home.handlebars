@@ -1,0 +1,13 @@
+<h1>{{titulo}}</h1>
+<p> ¡Bienvenido/a a la tienda! 🎉 </p>
+
+<h2> Productos disponibles: </h2>
+<ul>
+  {{#each productos}}
+    <li>
+      <strong>{{title}}</strong> - ${{price}}<br>
+      {{description}}<br>
+      <em> Categoría: {{category}} </em>
+    </li>
+  {{/each}}
+</ul>
