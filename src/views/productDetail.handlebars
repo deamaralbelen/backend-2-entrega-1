@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{titulo}}</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+    }
+    .producto {
+      border: 1px solid #ccc;
+      padding: 1rem;
+      max-width: 600px;
+    }
+    .producto h2 {
+      margin-top: 0;
+    }
+    .producto p {
+      margin: 0.5rem 0;
+    }
+    button {
+      background-color: #597081;
+      color: white;
+      border: none;
+      padding: 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 1rem;
+      margin-top: 1rem;
+      border-radius: 4px;
+    }
+    button:hover {
+      background-color: #36494E;
+    }
+  </style>
+</head>
+<body>
+  <div class="producto">
+    <h2>{{producto.title}}</h2>
+    <p><strong> Descripción: </strong> {{producto.description}}</p>
+    <p><strong> Categoría: </strong> {{producto.category}}</p>
+    <p><strong> Precio: </strong> ${{producto.price}}</p>
+    <p><strong> Stock disponible: </strong> {{producto.stock}}</p>
+    {{#if producto.thumbnails.length}}
+      <div>
+        {{#each producto.thumbnails}}
+          <img src="{{this}}" alt="Imagen del producto" width="100" />
+        {{/each}}
+      </div>
+    {{/if}}
+    <button> Agregar al carrito </button>
+  </div>
+</body>
+</html>
