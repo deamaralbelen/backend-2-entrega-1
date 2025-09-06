@@ -10,6 +10,11 @@ import viewsRouter from './routes/views.routes.js';
 import productsRouter from './routes/products.routes.js';
 import cartsRouter from './routes/carts.routes.js';
 
+import passport from 'passport';
+import { initializePassport } from './config/passport.config.js';
+import usersRouter from './routes/users.routes.js';
+import sessionsRouter from './routes/sessions.routes.js';
+
 // Conexión con MongoDB
 
 mongoose.connect('mongodb://localhost:27017/backend-1-proyecto-final')
@@ -50,6 +55,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public'))); // para JS/CSS en vistas
 
+// Passport
+
+initializePassport();
+app.use(passport.initialize());
+
 // Rutas vistas
 
 app.use('/', viewsRouter);
@@ -58,6 +68,11 @@ app.use('/', viewsRouter);
 
 app.use('/api/products', productsRouter);
 app.use('/api/carts', cartsRouter);
+
+// Nuevas rutas
+
+app.use('/api/users', usersRouter);
+app.use('/api/sessions', sessionsRouter);
 
 // WebSockets
 
